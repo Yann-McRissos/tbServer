@@ -72,9 +72,11 @@ class labRequestHandler(socketserver.StreamRequestHandler):
             if 'invited_id' not in dictData:
                 self.errorRoutine("No invited ID given")
                 return
-            twined = wp.isTwined(user['ID'], dictData['invited_id'])
-            if twined == False:
-                self.errorRoutine("This academy is not twined to the requested academy")
+            # Selon Mr. de Fooz, les 3 lignes suivantes font tout planter
+#            twined = wp.isTwined(user['ID'], dictData['invited_id'])
+#            if twined == False:
+#                self.errorRoutine("This academy is not twined to the requested academy")
+            # commnenter jusqu'ici mais garder le return
                 return
 
             #Check if client is already invited in another lab
