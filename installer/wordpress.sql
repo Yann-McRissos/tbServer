@@ -7,8 +7,9 @@ USE `wordpress`;
 --
 -- User: `wordpress`
 --
-CREATE USER 'wordpress'@'%.%.%.%' IDENTIFIED BY '2QNiCYmMZu';
-GRANT ALL PRIVILEGES ON  'wordpress'.* to 'wordpress'@'%.%.%.%';
+CREATE USER 'wordpress'@'%.%.%.%';
+GRANT ALL PRIVILEGES ON `wordpress`.* to 'wordpress'@'%.%.%.%';
+FLUSH PRIVILEGES;
 
 use wordpress;
 
