@@ -39,9 +39,9 @@ CREATE TABLE `wp_users` (
 --
 -- Table structure for table `wp_twinings`
 --
-CREATE TABLE `wp_users` (
+CREATE TABLE `wp_twinings` (
   `academy_1` bigint(20) DEFAULT NULL,
   `academy_2` bigint(20) DEFAULT NULL,
-  'approved' boolean DEFAULT FALSE,
-  PRIMARY KEY ('academy_1', 'academy_2')
+  approved boolean,
+  PRIMARY KEY (academy_1, academy_2)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
