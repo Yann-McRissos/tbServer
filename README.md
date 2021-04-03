@@ -1,5 +1,7 @@
 # Twinbridge Server
 
+### Only works on Ubuntu 18.04 with mariadb-server 10.1
+
 ### To do after install:
 
 /!\ Note the database's username and password at the end of the installation procedure /!\
