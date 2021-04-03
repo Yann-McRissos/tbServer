@@ -3,7 +3,7 @@
 [Unit]
 Description=Twinbridge Service
 After=network.target
-BindsTo=openvpn.service
+#BindsTo=openvpn.service
 After=openvpn.service
 
 [Service]
@@ -13,5 +13,5 @@ ExecStart=/bin/true
 ExecReload=/bin/true
 WorkingDirectory=/etc/tbServer
 
-[Install]
-WantedBy=multi-user.target
+#[Install]
+#WantedBy=multi-user.target
