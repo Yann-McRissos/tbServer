@@ -1,6 +1,6 @@
-# Twinbridge Server
+#Twinbridge Server
 
-### To do after install:
+###To do after install:
 
 /!\ Note the database's username and password /!\
 /!\ Update the client's ovpn config file (client.ovpn) to contain the newly generated CA key and certificate /!\
