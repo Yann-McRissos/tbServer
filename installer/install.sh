@@ -89,8 +89,8 @@ function configure_openvpn(){
     sudo openvpn --genkey --secret /etc/openvpn/ta.key
     ip_addr=`ip route show default | sed 's/.*src\s\([0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\).*/\1/g'`
     sudo sed -i -e "s/\(.*\){ip_addr}\(.*\)/\1$ip_addr\2/" /etc/openvpn/*.conf
-    sudo systemctl enable openvpn-server@TCPServer
-    sudo systemctl enable openvpn-server@UDPServer
+    sudo systemctl enable openvpn@TCPServer
+    sudo systemctl enable openvpn@UDPServer
 }
 
 function download_tbserver() {
