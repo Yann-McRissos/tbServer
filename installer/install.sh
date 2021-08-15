@@ -94,7 +94,7 @@ function configure_openvpn(){
 }
 
 function download_tbserver() {
-    git clone --depth 1 https://github.com/furest/tbServer $install_dir
+    git clone --depth 1 https://github.com/Yann-McRissos/tbServer $install_dir
 }
 
 function configure_mysql() {
