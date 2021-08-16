@@ -3,8 +3,10 @@
 ### Only works on Ubuntu 18.04 with mariadb-server 10.1
 
 ### Installation instructions
-Clone the repository on your system
+Clone the repository on your system.
+
 Start the install.sh script **with root privileges !**
+
 \# bash tbServer/installer/install.sh
 
 ### To do after install:
