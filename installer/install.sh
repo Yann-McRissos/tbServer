@@ -103,7 +103,7 @@ function configure_mysql() {
     tb_password=`< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-10};echo;`
     wp_password=`< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-10};echo;`
     sudo mysql --database twinbridge --execute="CREATE USER 'twinbridge'@'localhost' IDENTIFIED BY '${tb_password}'; GRANT ALL ON twinbridge.* to 'twinbridge'@'localhost'; FLUSH PRIVILEGES;"
-    sudo mysql --database wordpress --execute="CREATE USER 'wordpress'@'%.%.%.%' IDENTIFIED BY '${wp_password}'; GRANT ALL ON wordpress.* to 'wordpress'@'%.%.%.%'; FLUSH PRIVILEGES;"
+    sudo mysql --database wordpress --execute="CREATE USER 'wordpress'localhost' IDENTIFIED BY '${wp_password}'; GRANT ALL ON wordpress.* to 'wordpress'@'localhost'; FLUSH PRIVILEGES;"
 }
 
 function compile_analyze() {
