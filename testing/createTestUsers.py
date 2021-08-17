@@ -4,7 +4,7 @@ import mysql.connector
 from passlib.hash import phpass
 
 USER="user"
-PASSWORD="password"
+PASSWORD="pwd"
 
 def usage():
     print("Usage : " + sys.argv[0] + " [begin] end")
@@ -12,14 +12,14 @@ def usage():
 
 wpParams = {
     "host":"localhost",
-    "user":"admin",
-    "passwd":"AkyP3neGFaB689eK",
+    "user":"wordpress",
+    "passwd":"",
     "database":"wordpress"
 }
 tbParams = {
     "host":"localhost",
-    "user":"admin",
-    "passwd":"AkyP3neGFaB689eK",
+    "user":"twinbridge",
+    "passwd":"",
     "database":"twinbridge"
 }
 
