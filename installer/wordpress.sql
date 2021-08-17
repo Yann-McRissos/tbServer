@@ -4,15 +4,6 @@
 CREATE DATABASE IF NOT EXISTS `wordpress` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `wordpress`;
 
---
--- User: `wordpress`
---
-CREATE USER 'wordpress'@'%.%.%.%';
-GRANT ALL PRIVILEGES ON `wordpress`.* to 'wordpress'@'%.%.%.%';
-FLUSH PRIVILEGES;
-
-use wordpress;
-
 -- --------------------------------------------------------
 
 --
