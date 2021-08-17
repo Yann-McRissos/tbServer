@@ -20,4 +20,5 @@ Update the new file with the database credentials you received at the end of the
   +SMTP credentials for email account
 
 
-Update the client's ovpn config file (client.ovpn) to contain the newly generated CA key and server certificate (located in /etc/openvpn/).
+Over on the client machines: update the client's ovpn config file (client.ovpn).
+It must contain the newly generated CA key and server certificate (located in /etc/openvpn/ on the server).
