@@ -99,6 +99,7 @@ function download_tbserver() {
 
 function configure_mysql() {
     sudo mysql < $install_dir/installer/twinbridge.sql
+    sudo mysql < $install_dir/installer/wordpress.sql
     tb_password=`< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-10};echo;`
     sudo mysql --database twinbridge --execute="CREATE USER 'twinbridge'@'localhost' IDENTIFIED BY '${tb_password}'; GRANT ALL ON twinbridge.* to 'twinbridge'@'localhost'; FLUSH PRIVILEGES;"
 }
