@@ -101,7 +101,9 @@ function configure_mysql() {
     sudo mysql < $install_dir/installer/twinbridge.sql
     sudo mysql < $install_dir/installer/wordpress.sql
     tb_password=`< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-10};echo;`
+    wp_password=`< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-10};echo;`
     sudo mysql --database twinbridge --execute="CREATE USER 'twinbridge'@'localhost' IDENTIFIED BY '${tb_password}'; GRANT ALL ON twinbridge.* to 'twinbridge'@'localhost'; FLUSH PRIVILEGES;"
+    sudo mysql --database wordpress --execute="CREATE USER 'wordpress'@'%.%.%.%' IDENTIFIED BY '${wp_password}'; GRANT ALL ON wordpress.* to 'wordpress'@'%.%.%.%'; FLUSH PRIVILEGES;"
 }
 
 function compile_analyze() {
@@ -129,6 +131,7 @@ function configure_ssh() {
 function install_complete() {
     install_log "Installation completed!"
     install_warning "mariadb username is 'twinbridge' and password is '${tb_password}'"
+    install_warning "mariadb username is 'wordpress' and password is '${wp_password}'"
     echo ""
     install_warning "Iptables rules will now be applied. If you are connected using SSH you will be disconnected."
     echo -n "The system needs to be rebooted as a final step. Reboot now? [y/N]: "
