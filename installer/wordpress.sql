@@ -20,6 +20,7 @@ CREATE TABLE `wp_users` (
   `user_status` int(11) NOT NULL DEFAULT 0,
   `display_name` varchar(250) NOT NULL,
   `user_registered` datetime NOT NULL,
+  PRIMARY KEY (ID),
   UNIQUE KEY `wp_users_user_email_uindex` (`user_email`),
   UNIQUE KEY `wp_users_user_login_uindex` (`user_login`),
   UNIQUE KEY `wp_users_user_nicename_uindex` (`user_nicename`)
@@ -31,8 +32,8 @@ CREATE TABLE `wp_users` (
 -- Table structure for table `wp_twinings`
 --
 CREATE TABLE `wp_twinings` (
+  `ID` bigint(20) auto_increment PRIMARY KEY
   `academy_1` bigint(20) DEFAULT NULL,
   `academy_2` bigint(20) DEFAULT NULL,
-  approved boolean,
-  PRIMARY KEY (academy_1, academy_2)
+  approved boolean
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
