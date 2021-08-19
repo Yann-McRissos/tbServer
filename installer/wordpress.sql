@@ -32,7 +32,7 @@ CREATE TABLE `wp_users` (
 -- Table structure for table `wp_twinings`
 --
 CREATE TABLE `wp_twinings` (
-  `ID` bigint(20) auto_increment PRIMARY KEY
+  `ID` bigint(20) auto_increment PRIMARY KEY,
   `academy_1` bigint(20) DEFAULT NULL,
   `academy_2` bigint(20) DEFAULT NULL,
   approved boolean
